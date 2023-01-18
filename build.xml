@@ -70,4 +70,14 @@
     nbproject/build-impl.xml file. 
 
     -->
+    
+    <target name="-post-jar">
+        <jar jarfile="dist/SetRucDownloaderFullLib.jar">
+            <zipfileset src="${dist.jar}" excludes="META-INF/*" />
+            <zipfileset src="lib/jsoup-1.15.3.jar" excludes="META-INF/*" />
+            <manifest>
+                <attribute name="Main-Class" value="com.doxa.setrucdownloader.main"/>
+            </manifest>
+        </jar>
+    </target>
 </project>
