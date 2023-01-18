@@ -39,10 +39,13 @@ public class main {
         SimpleFormatter formatter = new SimpleFormatter();
         fh.setFormatter(formatter);
 
+        logger.info("############# Iniciando descarga de archivos #############");
         
         for (int i = 0; i < 10; i++) {
             
             String urlAux = url+"ruc"+i+".zip"; 
+            
+        
 
             if (s.getStatusConnectionCode(urlAux) == 200) {
 
@@ -50,8 +53,6 @@ public class main {
                 Elements elements = document.getElementsByClass("btn btn-primary");
             
                 //System.out.println("Elementos encontrados = "+elements.size());
-                
-                
 
                 for (Element elem2 : elements) {
 
