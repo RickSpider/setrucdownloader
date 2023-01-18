@@ -58,7 +58,12 @@ public class main {
                     String d = link+elem2.attr("href");
                     
                     logger.info(d);
-                    unzip.unzip(d,"datos/");
+                    if (args.length > 0){
+                         unzip.unzip(d,args[0]);
+                    }else{
+                         unzip.unzip(d,"datos/");
+                    }
+                   
                 }
 
             }
